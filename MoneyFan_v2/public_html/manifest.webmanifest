@@ -1,0 +1,23 @@
+{
+  "name": "MoneyFan · Mis gastos",
+  "short_name": "MoneyFan",
+  "description": "Registro y consulta de gastos con sus boletas y facturas.",
+  "lang": "es-CL",
+  "id": "./",
+  "start_url": "./#/inicio",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F3F5F7",
+  "theme_color": "#2F4858",
+  "categories": ["finance", "productivity"],
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Registrar gasto", "url": "./#/nuevo", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Historial", "url": "./#/historial", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

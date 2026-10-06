@@ -1,0 +1,17 @@
+{
+  // =================================================================
+  //  MoneyFan · Configuración para ejecutar con F5 en VS Code
+  // =================================================================
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MoneyFan: ejecutar demo",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

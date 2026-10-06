@@ -1,0 +1,57 @@
+<!doctype html>
+<!-- =====================================================================
+     MoneyFan v2 · index.html
+     ---------------------------------------------------------------------
+     [QUÉ HACE ESTE ARCHIVO]
+     Única página de la app (SPA). Contiene el "esqueleto": barra
+     superior, zona donde se dibujan las pantallas (#vista) y menú de
+     navegación. El contenido lo dibuja assets/js/app.js según la ruta.
+     Las etiquetas <meta>/<link> de abajo la hacen instalable (PWA).
+     ===================================================================== -->
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MoneyFan</title>
+  <meta name="description" content="Registro y consulta de gastos con sus boletas y facturas.">
+
+  <!-- [SECCIÓN 1] PWA: manifiesto, colores e íconos -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#2F4858">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MoneyFan">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- [SECCIÓN 2] Estilos -->
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <!-- [SECCIÓN 3] Aviso de "sin conexión" -->
+  <div id="offline" class="offline oculto" role="status">Sin conexión · los datos se actualizarán al volver</div>
+
+  <!-- [SECCIÓN 4] Pantalla de ingreso (se dibuja desde JS) -->
+  <div id="login" class="oculto"></div>
+
+  <!-- [SECCIÓN 5] App con sesión iniciada -->
+  <div id="app" class="oculto">
+    <header class="barra">
+      <button id="btn-atras" class="btn-icono oculto" aria-label="Volver">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <span id="marca" class="logo"><img src="assets/icons/icon-192.png" alt=""></span>
+      <h1 id="titulo">MoneyFan</h1>
+    </header>
+    <main id="vista" tabindex="-1"></main>
+    <nav id="nav" class="nav" aria-label="Navegación principal"></nav>
+  </div>
+
+  <!-- [SECCIÓN 6] Contenedor de avisos (toast) -->
+  <div id="avisos" aria-live="polite"></div>
+
+  <noscript><p style="padding:16px">MoneyFan necesita JavaScript activado.</p></noscript>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

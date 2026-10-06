@@ -1,0 +1,7 @@
+# =====================================================================
+#  MoneyFan · requirements.txt
+#  Librerías necesarias. Instalar con:  pip install -r requirements.txt
+# =====================================================================
+kivy==2.3.1        # Framework de interfaz gráfica multiplataforma
+kivymd==1.2.0      # Componentes Material Design para Kivy
+plyer>=2.1.0       # (Opcional) notificación nativa del sistema a las 20:00

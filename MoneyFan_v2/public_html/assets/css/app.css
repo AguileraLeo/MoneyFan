@@ -1,0 +1,424 @@
+/* =====================================================================
+   MoneyFan v2 · assets/css/app.css
+   ---------------------------------------------------------------------
+   [QUÉ HACE ESTE ARCHIVO]
+   Todo el diseño visual de la PWA. Pensado PRIMERO para celular
+   (mobile-first) y adaptado a tablet/computador con media queries.
+   Mantiene la paleta suave y formal de la v1 (azul petróleo, salvia,
+   arena) e incluye modo oscuro automático.
+   ===================================================================== */
+
+/* ---------------------------------------------------------------
+   [SECCIÓN 1] VARIABLES DE COLOR Y MEDIDAS (tokens)
+   Cambiar un color aquí lo cambia en toda la app.
+   --------------------------------------------------------------- */
+:root {
+  --primario: #2F4858;      /* Azul petróleo (barras, botones) */
+  --primario-hover: #243845;
+  --secundario: #5B7C8D;    /* Azul grisáceo */
+  --acento: #86A397;        /* Verde salvia (éxito) */
+  --acento2: #C9A66B;       /* Arena (destacados) */
+  --fondo: #F3F5F7;
+  --tarjeta: #FFFFFF;
+  --borde: #E1E6EA;
+  --texto: #263238;
+  --texto-suave: #5F737E;
+  --error: #B5524C;
+  --exito: #4F7A68;
+  --dato: #2F4858;          /* Color de las barras de los gráficos */
+  --dato-suave: #B8C8D1;
+  --grilla: #E7EBEE;
+  --sombra: 0 1px 2px rgba(38, 50, 56, .06), 0 4px 16px rgba(38, 50, 56, .06);
+  --radio: 14px;
+  --radio-sm: 10px;
+  --nav-alto: 64px;
+  color-scheme: light;
+}
+
+/* Modo oscuro: pasos propios de la misma paleta (no una inversión) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primario: #6E97AD;
+    --primario-hover: #82A8BC;
+    --secundario: #8FAAB8;
+    --acento: #8DB3A2;
+    --acento2: #D2B27A;
+    --fondo: #151C21;
+    --tarjeta: #1E272D;
+    --borde: #2E3A42;
+    --texto: #E6ECEF;
+    --texto-suave: #9DB0BA;
+    --error: #E08A83;
+    --exito: #8DB3A2;
+    --dato: #8FB3C7;
+    --dato-suave: #3B4C57;
+    --grilla: #2A353C;
+    --sombra: 0 1px 2px rgba(0, 0, 0, .3);
+    color-scheme: dark;
+  }
+}
+
+/* ---------------------------------------------------------------
+   [SECCIÓN 2] BASE
+   --------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--texto);
+  background: var(--fondo);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { margin: 0; line-height: 1.2; font-weight: 650; }
+h1 { font-size: 1.35rem; }
+h2 { font-size: 1.05rem; }
+h3 { font-size: .95rem; }
+p { margin: 0; }
+a { color: var(--primario); }
+button, input, select, textarea { font: inherit; color: inherit; }
+img { max-width: 100%; display: block; }
+.oculto { display: none !important; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.num { font-variant-numeric: tabular-nums; }
+.suave { color: var(--texto-suave); }
+.chico { font-size: .85rem; }
+
+/* ---------------------------------------------------------------
+   [SECCIÓN 3] ESTRUCTURA: barra superior, contenido y navegación
+   En celular la navegación va abajo (pulgar); en pantallas anchas
+   pasa a un riel lateral.
+   --------------------------------------------------------------- */
+.barra {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 8px;
+  min-height: 56px; padding: 8px 16px;
+  padding-top: max(8px, env(safe-area-inset-top));
+  background: var(--primario); color: #fff;
+}
+@media (prefers-color-scheme: dark) { .barra { background: #1A2329; border-bottom: 1px solid var(--borde); } }
+.barra h1 { font-size: 1.1rem; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.barra .logo { display: flex; align-items: center; gap: 8px; }
+.barra .logo img { width: 28px; height: 28px; border-radius: 7px; }
+.btn-icono {
+  display: inline-grid; place-items: center;
+  width: 40px; height: 40px; border: 0; border-radius: 50%;
+  background: transparent; color: inherit; cursor: pointer;
+}
+.btn-icono:hover { background: rgba(255,255,255,.12); }
+.btn-icono svg { width: 22px; height: 22px; }
+
+main#vista {
+  max-width: 560px; margin: 0 auto;
+  padding: 16px 16px calc(var(--nav-alto) + 32px + env(safe-area-inset-bottom));
+}
+main#vista.ancho { max-width: 1040px; }
+
+.nav {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  display: flex; justify-content: space-around; align-items: stretch;
+  height: calc(var(--nav-alto) + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--tarjeta); border-top: 1px solid var(--borde);
+}
+.nav a {
+  flex: 1; max-width: 120px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  color: var(--texto-suave); text-decoration: none; font-size: .72rem; font-weight: 550;
+}
+.nav a svg { width: 24px; height: 24px; }
+.nav a.activo { color: var(--primario); }
+.nav a.nav-nuevo span.circulo {
+  display: grid; place-items: center; width: 46px; height: 46px; margin-top: -18px;
+  border-radius: 50%; background: var(--primario); color: #fff; box-shadow: var(--sombra);
+}
+@media (prefers-color-scheme: dark) { .nav a.nav-nuevo span.circulo { color: #10171B; } }
+
+@media (min-width: 960px) {
+  .nav {
+    top: 56px; right: auto; bottom: 0; width: 96px; height: auto;
+    flex-direction: column; justify-content: flex-start; gap: 6px; padding: 16px 0;
+    border-top: 0; border-right: 1px solid var(--borde);
+  }
+  .nav a { flex: 0 0 68px; max-width: none; }
+  .nav a.nav-nuevo span.circulo { margin-top: 0; }
+  main#vista { padding-left: 112px; padding-bottom: 40px; max-width: 672px; }
+  main#vista.ancho { max-width: 1152px; }
+}
+
+/* ---------------------------------------------------------------
+   [SECCIÓN 4] TARJETAS, LISTAS Y CIFRAS
+   --------------------------------------------------------------- */
+.pila { display: flex; flex-direction: column; gap: 16px; }
+.tarjeta {
+  background: var(--tarjeta); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: 16px; box-shadow: var(--sombra);
+}
+.tarjeta > h2 { margin-bottom: 12px; }
+.cabeza { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.cabeza h2 { margin: 0; }
+
+.heroe { background: var(--primario); color: #fff; border: 0; }
+@media (prefers-color-scheme: dark) { .heroe { background: #27414F; } }
+.heroe .etiqueta { opacity: .85; font-size: .9rem; }
+.heroe .cifra { font-size: 2.4rem; font-weight: 700; letter-spacing: -.5px; }
+
+.cuadros { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (min-width: 720px) { .cuadros.c4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.cuadro { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); padding: 12px 14px; }
+.cuadro .etiqueta { font-size: .8rem; color: var(--texto-suave); }
+.cuadro .cifra { font-size: 1.3rem; font-weight: 680; margin-top: 2px; }
+.cuadro .detalle { font-size: .78rem; color: var(--texto-suave); }
+
+.lista { list-style: none; margin: 0; padding: 0; }
+.lista > li + li { border-top: 1px solid var(--borde); }
+.item {
+  display: flex; align-items: center; gap: 12px; width: 100%;
+  padding: 12px 4px; background: none; border: 0; text-align: left;
+  color: inherit; text-decoration: none; cursor: pointer;
+}
+.item:hover { background: color-mix(in srgb, var(--fondo) 70%, transparent); }
+.item .cuerpo { flex: 1; min-width: 0; }
+.item .titulo { font-weight: 580; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.item .sub { font-size: .8rem; color: var(--texto-suave); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.item .monto { font-weight: 650; white-space: nowrap; }
+.punto { width: 10px; height: 10px; border-radius: 50%; flex: none; background: var(--c, var(--secundario)); }
+.icono-cat {
+  display: grid; place-items: center; flex: none;
+  width: 40px; height: 40px; border-radius: 12px;
+  background: color-mix(in srgb, var(--c, var(--secundario)) 18%, transparent);
+  color: var(--texto);
+}
+.icono-cat svg { width: 20px; height: 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 999px; font-size: .72rem; font-weight: 600;
+  background: var(--fondo); border: 1px solid var(--borde); color: var(--texto-suave);
+}
+.chip svg { width: 12px; height: 12px; }
+.vacio { text-align: center; color: var(--texto-suave); padding: 24px 8px; }
+.vacio svg { width: 40px; height: 40px; opacity: .5; margin: 0 auto 8px; display: block; }
+
+/* Carpetas del historial (año / mes / día) */
+.carpetas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (min-width: 720px) { .carpetas { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.carpeta {
+  display: flex; flex-direction: column; gap: 2px; padding: 12px;
+  background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio-sm);
+  text-decoration: none; color: inherit;
+}
+.carpeta:hover { border-color: var(--secundario); }
+.carpeta svg { width: 26px; height: 26px; color: var(--acento2); }
+.carpeta .nombre { font-weight: 620; }
+.carpeta .monto { font-weight: 650; }
+.carpeta .sub { font-size: .76rem; color: var(--texto-suave); }
+.miga { display: flex; flex-wrap: wrap; gap: 4px; font-size: .85rem; color: var(--texto-suave); }
+.miga a { color: var(--texto-suave); }
+
+/* ---------------------------------------------------------------
+   [SECCIÓN 5] FORMULARIOS Y BOTONES
+   Campos grandes (≥44px) para tocar cómodo con el dedo.
+   El error se muestra bajo cada campo y lo marca en rojo.
+   --------------------------------------------------------------- */
+.campo { display: flex; flex-direction: column; gap: 4px; margin-bottom: 14px; }
+.campo label, .campo .label { font-size: .85rem; font-weight: 600; color: var(--texto-suave); }
+.campo .opcional { font-weight: 400; }
+.input {
+  width: 100%; min-height: 46px; padding: 10px 12px;
+  background: var(--tarjeta); border: 1.5px solid var(--borde); border-radius: var(--radio-sm);
+  outline: none; transition: border-color .15s;
+}
+.input:focus { border-color: var(--secundario); box-shadow: 0 0 0 3px color-mix(in srgb, var(--secundario) 20%, transparent); }
+textarea.input { min-height: 72px; resize: vertical; }
+.campo.con-error .input { border-color: var(--error); }
+.campo .error { color: var(--error); font-size: .8rem; min-height: 0; }
+.campo .ayuda { color: var(--texto-suave); font-size: .78rem; }
+.fila-campos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.prefijo { position: relative; }
+.prefijo > span { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--texto-suave); font-weight: 600; }
+.prefijo > .input { padding-left: 28px; }
+.ver-clave { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); color: var(--texto-suave); }
+
+.segmentos { display: flex; gap: 6px; flex-wrap: wrap; }
+.segmentos label {
+  flex: 1; min-width: 84px; position: relative;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 42px; padding: 6px 10px; cursor: pointer;
+  border: 1.5px solid var(--borde); border-radius: var(--radio-sm); background: var(--tarjeta);
+  font-size: .88rem; font-weight: 580; color: var(--texto);
+}
+.segmentos input { position: absolute; opacity: 0; pointer-events: none; }
+.segmentos input:checked + span { color: var(--primario); }
+.segmentos label:has(input:checked) { border-color: var(--primario); background: color-mix(in srgb, var(--primario) 8%, var(--tarjeta)); }
+.segmentos label:has(input:focus-visible) { box-shadow: 0 0 0 3px color-mix(in srgb, var(--secundario) 30%, transparent); }
+.segmentos.cats label { flex: 0 1 auto; min-width: 0; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 46px; padding: 10px 18px; cursor: pointer;
+  border: 1.5px solid transparent; border-radius: var(--radio-sm);
+  background: var(--primario); color: #fff; font-weight: 620; text-decoration: none;
+  transition: background .15s, opacity .15s;
+}
+@media (prefers-color-scheme: dark) { .btn { color: #10171B; } }
+.btn:hover { background: var(--primario-hover); }
+.btn:disabled { opacity: .55; cursor: progress; }
+.btn svg { width: 20px; height: 20px; }
+.btn.bloque { width: 100%; }
+.btn.secundario { background: var(--tarjeta); color: var(--primario); border-color: var(--borde); }
+.btn.secundario:hover { border-color: var(--secundario); }
+.btn.peligro { background: transparent; color: var(--error); border-color: color-mix(in srgb, var(--error) 40%, transparent); }
+.btn.peligro:hover { background: color-mix(in srgb, var(--error) 10%, transparent); }
+.btn.chico { min-height: 36px; padding: 6px 12px; font-size: .85rem; }
+.botones { display: flex; gap: 10px; flex-wrap: wrap; }
+.botones > .btn { flex: 1; }
+
+.interruptor { position: relative; width: 46px; height: 26px; flex: none; }
+.interruptor input { opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; position: absolute; z-index: 1; }
+.interruptor span { position: absolute; inset: 0; border-radius: 999px; background: var(--borde); transition: background .2s; }
+.interruptor span::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: transform .2s; box-shadow: 0 1px 2px rgba(0,0,0,.2); }
+.interruptor input:checked + span { background: var(--acento); }
+.interruptor input:checked + span::after { transform: translateX(20px); }
+
+/* Documentos: botones de captura y miniaturas */
+.captura { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.captura label { cursor: pointer; }
+.captura input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.miniaturas { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 10px; margin-top: 10px; }
+.mini {
+  position: relative; aspect-ratio: 3 / 4; border-radius: var(--radio-sm); overflow: hidden;
+  border: 1px solid var(--borde); background: var(--fondo);
+  display: grid; place-items: center; cursor: pointer; padding: 0;
+}
+.mini img { width: 100%; height: 100%; object-fit: cover; }
+.mini .pdf { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: .7rem; color: var(--texto-suave); padding: 6px; text-align: center; word-break: break-all; }
+.mini .pdf svg { width: 30px; height: 30px; color: var(--error); }
+.mini .quitar {
+  position: absolute; top: 4px; right: 4px; width: 28px; height: 28px; border-radius: 50%;
+  border: 0; background: rgba(20, 28, 33, .7); color: #fff; display: grid; place-items: center; cursor: pointer;
+}
+.mini .quitar svg { width: 16px; height: 16px; }
+.mini .nuevo { position: absolute; left: 4px; bottom: 4px; }
+
+/* ---------------------------------------------------------------
+   [SECCIÓN 6] GRÁFICOS (SVG propio, sin librerías externas)
+   Barras delgadas de un solo tono, extremo redondeado, grilla
+   tenue y etiquetas selectivas; el detalle va en el tooltip.
+   --------------------------------------------------------------- */
+.grafico { position: relative; }
+.grafico svg { width: 100%; height: auto; display: block; overflow: visible; }
+.grafico .eje { font-size: 11px; fill: var(--texto-suave); }
+.grafico .valor { font-size: 11px; fill: var(--texto); font-weight: 650; }
+.grafico .grilla { stroke: var(--grilla); stroke-width: 1; }
+.grafico .barra-dato { fill: var(--dato); }
+.grafico .barra-dato.tenue { fill: var(--dato-suave); }
+.grafico .zona { fill: transparent; cursor: pointer; }
+.grafico .zona:hover + .barra-dato, .grafico .zona.foco + .barra-dato { opacity: .8; }
+
+.barras-h { display: flex; flex-direction: column; gap: 10px; }
+.barras-h .fila { display: grid; grid-template-columns: minmax(84px, 34%) 1fr auto; align-items: center; gap: 10px; font-size: .85rem; }
+.barras-h .nombre { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.barras-h .nombre span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.barras-h .pista { display: block; height: 12px; }
+.barras-h .relleno { display: block; height: 12px; min-width: 3px; border-radius: 0 4px 4px 0; background: var(--dato); width: calc(var(--p) * 1%); }
+.barras-h .cifra { font-weight: 650; text-align: right; }
+
+.tooltip {
+  position: fixed; z-index: 90; pointer-events: none;
+  padding: 6px 10px; border-radius: 8px; font-size: .8rem;
+  background: var(--texto); color: var(--tarjeta); box-shadow: var(--sombra);
+  transform: translate(-50%, calc(-100% - 10px)); white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------
+   [SECCIÓN 7] AVISOS (toast), MODALES y VISOR DE DOCUMENTOS
+   --------------------------------------------------------------- */
+#avisos {
+  position: fixed; left: 50%; transform: translateX(-50%); z-index: 100;
+  bottom: calc(var(--nav-alto) + 16px + env(safe-area-inset-bottom));
+  display: flex; flex-direction: column; gap: 8px; width: min(92vw, 420px);
+}
+.aviso {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 14px; border-radius: var(--radio-sm);
+  background: var(--texto); color: var(--tarjeta); box-shadow: var(--sombra);
+  animation: subir .2s ease-out;
+}
+.aviso svg { width: 20px; height: 20px; flex: none; }
+.aviso.error { background: var(--error); color: #fff; }
+.aviso.ok svg { color: var(--acento); }
+@keyframes subir { from { opacity: 0; transform: translateY(8px); } }
+
+.modal-fondo {
+  position: fixed; inset: 0; z-index: 80; background: rgba(15, 22, 27, .55);
+  display: flex; align-items: flex-end; justify-content: center;
+}
+@media (min-width: 640px) { .modal-fondo { align-items: center; } }
+.modal {
+  width: 100%; max-width: 480px; max-height: 92vh; overflow: auto;
+  background: var(--tarjeta); border-radius: 18px 18px 0 0; padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+  animation: subir .2s ease-out;
+}
+@media (min-width: 640px) { .modal { border-radius: 18px; } }
+.modal h2 { margin-bottom: 8px; }
+.modal p { color: var(--texto-suave); margin-bottom: 16px; }
+
+.visor { position: fixed; inset: 0; z-index: 85; background: #0E1418; display: flex; flex-direction: column; }
+.visor header { display: flex; align-items: center; gap: 8px; padding: 8px; color: #fff; padding-top: max(8px, env(safe-area-inset-top)); }
+.visor header .nombre { flex: 1; font-size: .85rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.visor .contenido { flex: 1; display: grid; place-items: center; overflow: auto; padding: 8px; }
+.visor .contenido img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.visor .contenido iframe { width: 100%; height: 100%; border: 0; background: #fff; border-radius: 6px; }
+
+/* ---------------------------------------------------------------
+   [SECCIÓN 8] PANTALLA DE INGRESO
+   --------------------------------------------------------------- */
+.login {
+  min-height: 100vh; min-height: 100dvh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  padding: 24px 16px; gap: 20px;
+  background: linear-gradient(180deg, var(--primario) 0 34%, var(--fondo) 34%);
+}
+.login .marca { text-align: center; color: #fff; }
+.login .marca img { width: 72px; height: 72px; border-radius: 18px; margin: 0 auto 10px; box-shadow: var(--sombra); }
+.login .marca h1 { font-size: 1.8rem; }
+.login .tarjeta { width: 100%; max-width: 400px; padding: 24px 20px; }
+.login .demo { width: 100%; max-width: 400px; font-size: .8rem; color: var(--texto-suave); text-align: center; }
+
+/* Tabla (admin, pantallas anchas) */
+.tabla-env { overflow-x: auto; }
+table.tabla { width: 100%; border-collapse: collapse; font-size: .86rem; }
+.tabla th, .tabla td { padding: 10px 8px; text-align: left; border-bottom: 1px solid var(--borde); white-space: nowrap; }
+.tabla th { font-size: .75rem; text-transform: uppercase; letter-spacing: .03em; color: var(--texto-suave); font-weight: 650; }
+.tabla td.der, .tabla th.der { text-align: right; }
+.tabla tr.clic { cursor: pointer; }
+.tabla tr.clic:hover td { background: var(--fondo); }
+.filtros { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: end; }
+@media (min-width: 820px) { .filtros { grid-template-columns: 1.2fr 1fr 1fr 1.4fr auto; } }
+.filtros .campo { margin: 0; }
+
+.cargando { display: grid; place-items: center; padding: 48px 0; }
+.cargando::after {
+  content: ""; width: 32px; height: 32px; border-radius: 50%;
+  border: 3px solid var(--borde); border-top-color: var(--primario);
+  animation: girar .8s linear infinite;
+}
+@keyframes girar { to { transform: rotate(360deg); } }
+.offline {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 120; text-align: center;
+  background: var(--acento2); color: #2b2210; font-size: .8rem; font-weight: 600; padding: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Tabla en pantallas anchas, lista en celular (vista Admin > Gastos) */
+.solo-movil { display: block; }
+.oculto-movil { display: none; }
+@media (min-width: 820px) {
+  .solo-movil { display: none; }
+  .oculto-movil { display: block; }
+}

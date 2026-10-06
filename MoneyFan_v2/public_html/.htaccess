@@ -1,0 +1,51 @@
+# =====================================================================
+#  MoneyFan v2 · public_html/.htaccess
+# ---------------------------------------------------------------------
+#  [QUÉ HACE] Configuración de Apache para el hosting cPanel:
+#    1. Fuerza HTTPS (necesario para instalar la PWA y para cookies seguras).
+#    2. Cabeceras de seguridad para toda la app.
+#    3. Oculta archivos sensibles y desactiva el listado de carpetas.
+#    4. Tipo correcto del manifest y del service worker.
+# =====================================================================
+
+# [SECCIÓN 1] HTTPS obligatorio (cPanel -> SSL/TLS -> AutoSSL gratis)
+#  Si pruebas en local sin HTTPS (XAMPP), comenta estas 4 líneas.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+    RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:\d+)?$
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# [SECCIÓN 2] Cabeceras de seguridad
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "same-origin"
+    Header always set Permissions-Policy "camera=(self), geolocation=(), microphone=()"
+    Header set Content-Security-Policy "default-src 'self'; img-src 'self' blob: data:; frame-src 'self' blob:; object-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'" "expr=%{CONTENT_TYPE} =~ m#text/html#"
+</IfModule>
+
+# [SECCIÓN 3] Sin listado de carpetas ni acceso a archivos ocultos/sensibles
+Options -Indexes
+<FilesMatch "(^\.|\.(sql|ini|log|sh|bak|md)$)">
+    Require all denied
+</FilesMatch>
+
+# [SECCIÓN 4] Tipos MIME de la PWA
+AddType application/manifest+json .webmanifest
+<Files "sw.js">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "no-cache"
+        Header set Service-Worker-Allowed "./"
+    </IfModule>
+</Files>
+
+# [SECCIÓN 5] Límites de subida (si el hosting permite php_value aquí;
+#  si no, ajústalos en cPanel -> "Select PHP Version" -> Options)
+<IfModule mod_php.c>
+    php_value upload_max_filesize 6M
+    php_value post_max_size 32M
+    php_value max_file_uploads 10
+</IfModule>

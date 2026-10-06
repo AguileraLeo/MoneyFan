@@ -1,0 +1,7 @@
+{
+  "_comentario": "Usuarios DEMO hardcodeados (no hay base de datos). La clave debe tener exactamente 6 caracteres.",
+  "usuarios": [
+    {"rut": "12.345.678-9", "clave": "123456", "nombre": "Leonardo"},
+    {"rut": "11.111.111-1", "clave": "abc123", "nombre": "Usuario Demo"}
+  ]
+}

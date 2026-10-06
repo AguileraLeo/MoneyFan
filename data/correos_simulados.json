@@ -1,0 +1,1193 @@
+{
+  "_comentario": "Bandeja de entrada Gmail SIMULADA (hardcodeada). 'dias_atras' se cuenta desde la fecha actual, así la demo siempre muestra datos recientes.",
+  "correos": [
+    {
+      "id": "MSG-0001",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 220956 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Café latte",
+          "cantidad": 1,
+          "precio_unitario": 2800
+        }
+      ],
+      "monto": 2800,
+      "folio": 220956,
+      "dias_atras": 0,
+      "hora": "08:15"
+    },
+    {
+      "id": "MSG-0002",
+      "remitente": "boletas@kioscodonpepe.cl",
+      "asunto": "Boleta electrónica N° 603730 - Kiosco Don Pepe",
+      "comercio": "Kiosco Don Pepe",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Chicle menta",
+          "cantidad": 1,
+          "precio_unitario": 500
+        }
+      ],
+      "monto": 500,
+      "folio": 603730,
+      "dias_atras": 0,
+      "hora": "10:40"
+    },
+    {
+      "id": "MSG-0003",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 427000 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Pasaje bus interurbano",
+          "cantidad": 1,
+          "precio_unitario": 1800
+        }
+      ],
+      "monto": 1800,
+      "folio": 427000,
+      "dias_atras": 0,
+      "hora": "13:05"
+    },
+    {
+      "id": "MSG-0004",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 251118 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Desodorante en barra",
+          "cantidad": 1,
+          "precio_unitario": 3490
+        }
+      ],
+      "monto": 3490,
+      "folio": 251118,
+      "dias_atras": 0,
+      "hora": "16:30"
+    },
+    {
+      "id": "MSG-0005",
+      "remitente": "boletas@kioscodonpepe.cl",
+      "asunto": "Boleta electrónica N° 459279 - Kiosco Don Pepe",
+      "comercio": "Kiosco Don Pepe",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Galletas de chocolate",
+          "cantidad": 2,
+          "precio_unitario": 900
+        }
+      ],
+      "monto": 1800,
+      "folio": 459279,
+      "dias_atras": 0,
+      "hora": "19:10"
+    },
+    {
+      "id": "MSG-0006",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 601871 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Ibuprofeno 400 mg",
+          "cantidad": 1,
+          "precio_unitario": 1890
+        }
+      ],
+      "monto": 1890,
+      "folio": 601871,
+      "dias_atras": 1,
+      "hora": "13:58"
+    },
+    {
+      "id": "MSG-0007",
+      "remitente": "boletas@kioscodonpepe.cl",
+      "asunto": "Boleta electrónica N° 124217 - Kiosco Don Pepe",
+      "comercio": "Kiosco Don Pepe",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Barra de cereal",
+          "cantidad": 2,
+          "precio_unitario": 650
+        }
+      ],
+      "monto": 1300,
+      "folio": 124217,
+      "dias_atras": 1,
+      "hora": "08:41"
+    },
+    {
+      "id": "MSG-0008",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 653918 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Té chai",
+          "cantidad": 1,
+          "precio_unitario": 2200
+        }
+      ],
+      "monto": 2200,
+      "folio": 653918,
+      "dias_atras": 2,
+      "hora": "16:05"
+    },
+    {
+      "id": "MSG-0009",
+      "remitente": "boletas@kioscodonpepe.cl",
+      "asunto": "Boleta electrónica N° 823588 - Kiosco Don Pepe",
+      "comercio": "Kiosco Don Pepe",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Bebida 500 ml",
+          "cantidad": 1,
+          "precio_unitario": 1200
+        }
+      ],
+      "monto": 1200,
+      "folio": 823588,
+      "dias_atras": 3,
+      "hora": "08:34"
+    },
+    {
+      "id": "MSG-0010",
+      "remitente": "facturacion@laesquina.cl",
+      "asunto": "Boleta electrónica N° 412569 - Minimarket La Esquina",
+      "comercio": "Minimarket La Esquina",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Yogurt batido",
+          "cantidad": 2,
+          "precio_unitario": 750
+        }
+      ],
+      "monto": 1500,
+      "folio": 412569,
+      "dias_atras": 3,
+      "hora": "08:12"
+    },
+    {
+      "id": "MSG-0011",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 195431 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Recarga tarjeta transporte",
+          "cantidad": 1,
+          "precio_unitario": 5000
+        }
+      ],
+      "monto": 5000,
+      "folio": 195431,
+      "dias_atras": 4,
+      "hora": "13:05"
+    },
+    {
+      "id": "MSG-0012",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 643578 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Ibuprofeno 400 mg",
+          "cantidad": 1,
+          "precio_unitario": 1890
+        }
+      ],
+      "monto": 1890,
+      "folio": 643578,
+      "dias_atras": 5,
+      "hora": "17:58"
+    },
+    {
+      "id": "MSG-0013",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 275156 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Pasaje bus interurbano",
+          "cantidad": 1,
+          "precio_unitario": 1800
+        }
+      ],
+      "monto": 1800,
+      "folio": 275156,
+      "dias_atras": 6,
+      "hora": "16:34"
+    },
+    {
+      "id": "MSG-0014",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 909435 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Ibuprofeno 400 mg",
+          "cantidad": 1,
+          "precio_unitario": 1890
+        }
+      ],
+      "monto": 1890,
+      "folio": 909435,
+      "dias_atras": 7,
+      "hora": "07:41"
+    },
+    {
+      "id": "MSG-0015",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 658463 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Té chai",
+          "cantidad": 1,
+          "precio_unitario": 2200
+        }
+      ],
+      "monto": 2200,
+      "folio": 658463,
+      "dias_atras": 8,
+      "hora": "13:12"
+    },
+    {
+      "id": "MSG-0016",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 916898 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Recarga tarjeta transporte",
+          "cantidad": 1,
+          "precio_unitario": 5000
+        }
+      ],
+      "monto": 5000,
+      "folio": 916898,
+      "dias_atras": 8,
+      "hora": "08:41"
+    },
+    {
+      "id": "MSG-0017",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 445678 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Recarga tarjeta transporte",
+          "cantidad": 1,
+          "precio_unitario": 5000
+        }
+      ],
+      "monto": 5000,
+      "folio": 445678,
+      "dias_atras": 9,
+      "hora": "20:58"
+    },
+    {
+      "id": "MSG-0018",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 743016 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Pasta dental",
+          "cantidad": 1,
+          "precio_unitario": 2190
+        }
+      ],
+      "monto": 2190,
+      "folio": 743016,
+      "dias_atras": 9,
+      "hora": "08:41"
+    },
+    {
+      "id": "MSG-0019",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 945234 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Té chai",
+          "cantidad": 1,
+          "precio_unitario": 2200
+        }
+      ],
+      "monto": 2200,
+      "folio": 945234,
+      "dias_atras": 10,
+      "hora": "08:41"
+    },
+    {
+      "id": "MSG-0020",
+      "remitente": "ventas@libreriapunto.cl",
+      "asunto": "Boleta electrónica N° 958084 - Librería Punto",
+      "comercio": "Librería Punto",
+      "categoria": "Otros",
+      "detalle": [
+        {
+          "item": "Cuaderno universitario",
+          "cantidad": 1,
+          "precio_unitario": 1990
+        }
+      ],
+      "monto": 1990,
+      "folio": 958084,
+      "dias_atras": 10,
+      "hora": "08:41"
+    },
+    {
+      "id": "MSG-0021",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 875813 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Pasaje bus interurbano",
+          "cantidad": 1,
+          "precio_unitario": 1800
+        }
+      ],
+      "monto": 1800,
+      "folio": 875813,
+      "dias_atras": 11,
+      "hora": "10:34"
+    },
+    {
+      "id": "MSG-0022",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 309629 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Té chai",
+          "cantidad": 1,
+          "precio_unitario": 2200
+        }
+      ],
+      "monto": 2200,
+      "folio": 309629,
+      "dias_atras": 12,
+      "hora": "14:41"
+    },
+    {
+      "id": "MSG-0023",
+      "remitente": "facturacion@laesquina.cl",
+      "asunto": "Boleta electrónica N° 866513 - Minimarket La Esquina",
+      "comercio": "Minimarket La Esquina",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Jugo en caja",
+          "cantidad": 1,
+          "precio_unitario": 690
+        }
+      ],
+      "monto": 690,
+      "folio": 866513,
+      "dias_atras": 12,
+      "hora": "12:20"
+    },
+    {
+      "id": "MSG-0024",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 129294 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Desodorante en barra",
+          "cantidad": 1,
+          "precio_unitario": 3490
+        }
+      ],
+      "monto": 3490,
+      "folio": 129294,
+      "dias_atras": 12,
+      "hora": "19:12"
+    },
+    {
+      "id": "MSG-0025",
+      "remitente": "boletas@kioscodonpepe.cl",
+      "asunto": "Boleta electrónica N° 371764 - Kiosco Don Pepe",
+      "comercio": "Kiosco Don Pepe",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Bebida 500 ml",
+          "cantidad": 1,
+          "precio_unitario": 1200
+        }
+      ],
+      "monto": 1200,
+      "folio": 371764,
+      "dias_atras": 13,
+      "hora": "16:20"
+    },
+    {
+      "id": "MSG-0026",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 826161 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Recarga tarjeta transporte",
+          "cantidad": 1,
+          "precio_unitario": 3000
+        }
+      ],
+      "monto": 3000,
+      "folio": 826161,
+      "dias_atras": 13,
+      "hora": "14:20"
+    },
+    {
+      "id": "MSG-0027",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 947842 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Medialuna",
+          "cantidad": 1,
+          "precio_unitario": 1300
+        }
+      ],
+      "monto": 1300,
+      "folio": 947842,
+      "dias_atras": 14,
+      "hora": "16:05"
+    },
+    {
+      "id": "MSG-0028",
+      "remitente": "boletas@kioscodonpepe.cl",
+      "asunto": "Boleta electrónica N° 184450 - Kiosco Don Pepe",
+      "comercio": "Kiosco Don Pepe",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Bebida 500 ml",
+          "cantidad": 1,
+          "precio_unitario": 1200
+        }
+      ],
+      "monto": 1200,
+      "folio": 184450,
+      "dias_atras": 14,
+      "hora": "15:34"
+    },
+    {
+      "id": "MSG-0029",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 207119 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Pasta dental",
+          "cantidad": 1,
+          "precio_unitario": 2190
+        }
+      ],
+      "monto": 2190,
+      "folio": 207119,
+      "dias_atras": 14,
+      "hora": "19:20"
+    },
+    {
+      "id": "MSG-0030",
+      "remitente": "facturacion@laesquina.cl",
+      "asunto": "Boleta electrónica N° 306261 - Minimarket La Esquina",
+      "comercio": "Minimarket La Esquina",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Pan amasado x2",
+          "cantidad": 1,
+          "precio_unitario": 800
+        }
+      ],
+      "monto": 800,
+      "folio": 306261,
+      "dias_atras": 15,
+      "hora": "13:05"
+    },
+    {
+      "id": "MSG-0031",
+      "remitente": "ventas@libreriapunto.cl",
+      "asunto": "Boleta electrónica N° 606098 - Librería Punto",
+      "comercio": "Librería Punto",
+      "categoria": "Otros",
+      "detalle": [
+        {
+          "item": "Lápiz pasta azul",
+          "cantidad": 1,
+          "precio_unitario": 450
+        }
+      ],
+      "monto": 450,
+      "folio": 606098,
+      "dias_atras": 15,
+      "hora": "08:41"
+    },
+    {
+      "id": "MSG-0032",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 602764 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Café latte",
+          "cantidad": 1,
+          "precio_unitario": 2800
+        }
+      ],
+      "monto": 2800,
+      "folio": 602764,
+      "dias_atras": 16,
+      "hora": "18:20"
+    },
+    {
+      "id": "MSG-0033",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 460717 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Recarga tarjeta transporte",
+          "cantidad": 1,
+          "precio_unitario": 5000
+        }
+      ],
+      "monto": 5000,
+      "folio": 460717,
+      "dias_atras": 16,
+      "hora": "14:41"
+    },
+    {
+      "id": "MSG-0034",
+      "remitente": "boletas@kioscodonpepe.cl",
+      "asunto": "Boleta electrónica N° 225728 - Kiosco Don Pepe",
+      "comercio": "Kiosco Don Pepe",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Galletas de chocolate",
+          "cantidad": 2,
+          "precio_unitario": 900
+        }
+      ],
+      "monto": 1800,
+      "folio": 225728,
+      "dias_atras": 17,
+      "hora": "20:05"
+    },
+    {
+      "id": "MSG-0035",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 920304 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Espresso doble",
+          "cantidad": 1,
+          "precio_unitario": 2100
+        }
+      ],
+      "monto": 2100,
+      "folio": 920304,
+      "dias_atras": 17,
+      "hora": "14:58"
+    },
+    {
+      "id": "MSG-0036",
+      "remitente": "ventas@libreriapunto.cl",
+      "asunto": "Boleta electrónica N° 601253 - Librería Punto",
+      "comercio": "Librería Punto",
+      "categoria": "Otros",
+      "detalle": [
+        {
+          "item": "Destacador",
+          "cantidad": 1,
+          "precio_unitario": 890
+        }
+      ],
+      "monto": 890,
+      "folio": 601253,
+      "dias_atras": 17,
+      "hora": "08:05"
+    },
+    {
+      "id": "MSG-0037",
+      "remitente": "ventas@libreriapunto.cl",
+      "asunto": "Boleta electrónica N° 555003 - Librería Punto",
+      "comercio": "Librería Punto",
+      "categoria": "Otros",
+      "detalle": [
+        {
+          "item": "Cuaderno universitario",
+          "cantidad": 1,
+          "precio_unitario": 1990
+        }
+      ],
+      "monto": 1990,
+      "folio": 555003,
+      "dias_atras": 18,
+      "hora": "16:58"
+    },
+    {
+      "id": "MSG-0038",
+      "remitente": "facturacion@laesquina.cl",
+      "asunto": "Boleta electrónica N° 939724 - Minimarket La Esquina",
+      "comercio": "Minimarket La Esquina",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Plátano x3",
+          "cantidad": 1,
+          "precio_unitario": 990
+        }
+      ],
+      "monto": 990,
+      "folio": 939724,
+      "dias_atras": 18,
+      "hora": "11:58"
+    },
+    {
+      "id": "MSG-0039",
+      "remitente": "ventas@libreriapunto.cl",
+      "asunto": "Boleta electrónica N° 585659 - Librería Punto",
+      "comercio": "Librería Punto",
+      "categoria": "Otros",
+      "detalle": [
+        {
+          "item": "Destacador",
+          "cantidad": 1,
+          "precio_unitario": 890
+        }
+      ],
+      "monto": 890,
+      "folio": 585659,
+      "dias_atras": 19,
+      "hora": "12:05"
+    },
+    {
+      "id": "MSG-0040",
+      "remitente": "facturacion@laesquina.cl",
+      "asunto": "Boleta electrónica N° 189044 - Minimarket La Esquina",
+      "comercio": "Minimarket La Esquina",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Jugo en caja",
+          "cantidad": 2,
+          "precio_unitario": 690
+        }
+      ],
+      "monto": 1380,
+      "folio": 189044,
+      "dias_atras": 19,
+      "hora": "12:12"
+    },
+    {
+      "id": "MSG-0041",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 266572 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Recarga tarjeta transporte",
+          "cantidad": 1,
+          "precio_unitario": 5000
+        }
+      ],
+      "monto": 5000,
+      "folio": 266572,
+      "dias_atras": 19,
+      "hora": "08:34"
+    },
+    {
+      "id": "MSG-0042",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 233209 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Pasta dental",
+          "cantidad": 1,
+          "precio_unitario": 2190
+        }
+      ],
+      "monto": 2190,
+      "folio": 233209,
+      "dias_atras": 20,
+      "hora": "19:20"
+    },
+    {
+      "id": "MSG-0043",
+      "remitente": "ventas@libreriapunto.cl",
+      "asunto": "Boleta electrónica N° 258492 - Librería Punto",
+      "comercio": "Librería Punto",
+      "categoria": "Otros",
+      "detalle": [
+        {
+          "item": "Cuaderno universitario",
+          "cantidad": 1,
+          "precio_unitario": 1990
+        }
+      ],
+      "monto": 1990,
+      "folio": 258492,
+      "dias_atras": 21,
+      "hora": "10:34"
+    },
+    {
+      "id": "MSG-0044",
+      "remitente": "facturacion@laesquina.cl",
+      "asunto": "Boleta electrónica N° 253274 - Minimarket La Esquina",
+      "comercio": "Minimarket La Esquina",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Jugo en caja",
+          "cantidad": 2,
+          "precio_unitario": 690
+        }
+      ],
+      "monto": 1380,
+      "folio": 253274,
+      "dias_atras": 21,
+      "hora": "21:34"
+    },
+    {
+      "id": "MSG-0045",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 966659 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Toallitas húmedas",
+          "cantidad": 1,
+          "precio_unitario": 1590
+        }
+      ],
+      "monto": 1590,
+      "folio": 966659,
+      "dias_atras": 22,
+      "hora": "14:34"
+    },
+    {
+      "id": "MSG-0046",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 597399 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Toallitas húmedas",
+          "cantidad": 1,
+          "precio_unitario": 1590
+        }
+      ],
+      "monto": 1590,
+      "folio": 597399,
+      "dias_atras": 23,
+      "hora": "20:34"
+    },
+    {
+      "id": "MSG-0047",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 467428 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Recarga tarjeta transporte",
+          "cantidad": 1,
+          "precio_unitario": 5000
+        }
+      ],
+      "monto": 5000,
+      "folio": 467428,
+      "dias_atras": 23,
+      "hora": "11:58"
+    },
+    {
+      "id": "MSG-0048",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 675311 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Té chai",
+          "cantidad": 1,
+          "precio_unitario": 2200
+        }
+      ],
+      "monto": 2200,
+      "folio": 675311,
+      "dias_atras": 24,
+      "hora": "17:34"
+    },
+    {
+      "id": "MSG-0049",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 237346 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Toallitas húmedas",
+          "cantidad": 1,
+          "precio_unitario": 1590
+        }
+      ],
+      "monto": 1590,
+      "folio": 237346,
+      "dias_atras": 24,
+      "hora": "09:05"
+    },
+    {
+      "id": "MSG-0050",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 114934 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Desodorante en barra",
+          "cantidad": 1,
+          "precio_unitario": 3490
+        }
+      ],
+      "monto": 3490,
+      "folio": 114934,
+      "dias_atras": 24,
+      "hora": "09:12"
+    },
+    {
+      "id": "MSG-0051",
+      "remitente": "boletas@kioscodonpepe.cl",
+      "asunto": "Boleta electrónica N° 885903 - Kiosco Don Pepe",
+      "comercio": "Kiosco Don Pepe",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Galletas de chocolate",
+          "cantidad": 2,
+          "precio_unitario": 900
+        }
+      ],
+      "monto": 1800,
+      "folio": 885903,
+      "dias_atras": 25,
+      "hora": "14:41"
+    },
+    {
+      "id": "MSG-0052",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 554882 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Pasta dental",
+          "cantidad": 1,
+          "precio_unitario": 2190
+        }
+      ],
+      "monto": 2190,
+      "folio": 554882,
+      "dias_atras": 25,
+      "hora": "11:20"
+    },
+    {
+      "id": "MSG-0053",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 966286 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Pasta dental",
+          "cantidad": 1,
+          "precio_unitario": 2190
+        }
+      ],
+      "monto": 2190,
+      "folio": 966286,
+      "dias_atras": 26,
+      "hora": "13:41"
+    },
+    {
+      "id": "MSG-0054",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 129353 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Recarga tarjeta transporte",
+          "cantidad": 1,
+          "precio_unitario": 3000
+        }
+      ],
+      "monto": 3000,
+      "folio": 129353,
+      "dias_atras": 27,
+      "hora": "16:20"
+    },
+    {
+      "id": "MSG-0055",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 323115 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Ibuprofeno 400 mg",
+          "cantidad": 1,
+          "precio_unitario": 1890
+        }
+      ],
+      "monto": 1890,
+      "folio": 323115,
+      "dias_atras": 27,
+      "hora": "18:41"
+    },
+    {
+      "id": "MSG-0056",
+      "remitente": "facturacion@laesquina.cl",
+      "asunto": "Boleta electrónica N° 352223 - Minimarket La Esquina",
+      "comercio": "Minimarket La Esquina",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Plátano x3",
+          "cantidad": 2,
+          "precio_unitario": 990
+        }
+      ],
+      "monto": 1980,
+      "folio": 352223,
+      "dias_atras": 28,
+      "hora": "21:58"
+    },
+    {
+      "id": "MSG-0057",
+      "remitente": "facturacion@laesquina.cl",
+      "asunto": "Boleta electrónica N° 670795 - Minimarket La Esquina",
+      "comercio": "Minimarket La Esquina",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Plátano x3",
+          "cantidad": 1,
+          "precio_unitario": 990
+        }
+      ],
+      "monto": 990,
+      "folio": 670795,
+      "dias_atras": 29,
+      "hora": "13:34"
+    },
+    {
+      "id": "MSG-0058",
+      "remitente": "boletas@kioscodonpepe.cl",
+      "asunto": "Boleta electrónica N° 163863 - Kiosco Don Pepe",
+      "comercio": "Kiosco Don Pepe",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Chicle menta",
+          "cantidad": 1,
+          "precio_unitario": 500
+        }
+      ],
+      "monto": 500,
+      "folio": 163863,
+      "dias_atras": 29,
+      "hora": "14:58"
+    },
+    {
+      "id": "MSG-0059",
+      "remitente": "facturacion@laesquina.cl",
+      "asunto": "Boleta electrónica N° 794655 - Minimarket La Esquina",
+      "comercio": "Minimarket La Esquina",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Plátano x3",
+          "cantidad": 1,
+          "precio_unitario": 990
+        }
+      ],
+      "monto": 990,
+      "folio": 794655,
+      "dias_atras": 29,
+      "hora": "07:12"
+    },
+    {
+      "id": "MSG-0060",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 954638 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Toallitas húmedas",
+          "cantidad": 1,
+          "precio_unitario": 1590
+        }
+      ],
+      "monto": 1590,
+      "folio": 954638,
+      "dias_atras": 30,
+      "hora": "14:12"
+    },
+    {
+      "id": "MSG-0061",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 967318 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Espresso doble",
+          "cantidad": 1,
+          "precio_unitario": 2100
+        }
+      ],
+      "monto": 2100,
+      "folio": 967318,
+      "dias_atras": 31,
+      "hora": "16:05"
+    },
+    {
+      "id": "MSG-0062",
+      "remitente": "boletas@kioscodonpepe.cl",
+      "asunto": "Boleta electrónica N° 657658 - Kiosco Don Pepe",
+      "comercio": "Kiosco Don Pepe",
+      "categoria": "Snacks",
+      "detalle": [
+        {
+          "item": "Papas fritas chicas",
+          "cantidad": 1,
+          "precio_unitario": 1100
+        }
+      ],
+      "monto": 1100,
+      "folio": 657658,
+      "dias_atras": 32,
+      "hora": "16:12"
+    },
+    {
+      "id": "MSG-0063",
+      "remitente": "boleta@cafearoma.cl",
+      "asunto": "Boleta electrónica N° 648936 - Café Aroma",
+      "comercio": "Café Aroma",
+      "categoria": "Café",
+      "detalle": [
+        {
+          "item": "Té chai",
+          "cantidad": 1,
+          "precio_unitario": 2200
+        }
+      ],
+      "monto": 2200,
+      "folio": 648936,
+      "dias_atras": 33,
+      "hora": "16:05"
+    },
+    {
+      "id": "MSG-0064",
+      "remitente": "dte@farmaciavidasana.cl",
+      "asunto": "Boleta electrónica N° 119613 - Farmacia Vida Sana",
+      "comercio": "Farmacia Vida Sana",
+      "categoria": "Farmacia",
+      "detalle": [
+        {
+          "item": "Toallitas húmedas",
+          "cantidad": 1,
+          "precio_unitario": 1590
+        }
+      ],
+      "monto": 1590,
+      "folio": 119613,
+      "dias_atras": 34,
+      "hora": "16:34"
+    },
+    {
+      "id": "MSG-0065",
+      "remitente": "ventas@libreriapunto.cl",
+      "asunto": "Boleta electrónica N° 738115 - Librería Punto",
+      "comercio": "Librería Punto",
+      "categoria": "Otros",
+      "detalle": [
+        {
+          "item": "Lápiz pasta azul",
+          "cantidad": 1,
+          "precio_unitario": 450
+        }
+      ],
+      "monto": 450,
+      "folio": 738115,
+      "dias_atras": 35,
+      "hora": "11:20"
+    },
+    {
+      "id": "MSG-0066",
+      "remitente": "comprobantes@recargamovilidad.cl",
+      "asunto": "Boleta electrónica N° 913735 - Recarga Movilidad",
+      "comercio": "Recarga Movilidad",
+      "categoria": "Transporte",
+      "detalle": [
+        {
+          "item": "Recarga tarjeta transporte",
+          "cantidad": 1,
+          "precio_unitario": 3000
+        }
+      ],
+      "monto": 3000,
+      "folio": 913735,
+      "dias_atras": 35,
+      "hora": "12:34"
+    }
+  ]
+}

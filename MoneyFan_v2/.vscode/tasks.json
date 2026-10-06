@@ -1,0 +1,15 @@
+{
+  // MoneyFan v2 · Terminal > Ejecutar tarea... > "MoneyFan: servidor PHP local"
+  // Levanta la app en http://localhost:8000 (requiere PHP en el PATH, ej. el de XAMPP)
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MoneyFan: servidor PHP local",
+      "type": "shell",
+      "command": "php -S localhost:8000 -t public_html",
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+( A C T I V I D A D Parte2)
+--------------------------------------------------------------------
+
+La v2 debe mantener el propósito de registrar y consultar gastos y sus documentos asociados, pero evolucionar a una solución
+incorporando persistencia mediante
+
+a) MySQL             e) Backend/API
+b) autenticación     f) y preparación para un entorno real del hosting con "cpanel"
+c) seguridad básica
+
+--------------------------------------------------------------------
+
+Consideraciones técnicas obligatorias
+
+1.- DEBE utilizar una base de datos funcional con conexión real entre la app y la BBDD para almacenar y recuperar información
+2.- No se aceptara base de datos simulada, o almacenamiento únicamente en la memoria.
+3.- DEBE incluir un archivo SQL para crear la estructura de la base de datos.
+4.- DEBE utilizar phpMyAdmin para crear/importar y verificar la base de datos.
+5.- DEBE poder deslpegarse en un hosting compatible con cPanel, PHP y MySQL
+6.- Las credenciales reales del hosting no deben quedar expuestas en el código entregado.
+--------------------------------------------------------------------
+
+Requisitos funcionales minimos
+
+1.- inicio de sesión con RUT y contraseña para una cuenta individual Admin y Usuaria de ejemplo.
+2.- registro de boleta, factura u otro, proveedor, monto, descripción y fecha
+3.- captura y carga de documentos además de correlativo automatico
+4.- Historia de gastos con visualización de documentos
+5.- carpetas por año/mes/dia mas resumen mensual
+6.- contraseñas protejidas e interfaz adaptable a celulares con buena experiencia al usuario
+7.- instalación como PWA también Backend/API conectado a MySQL
+8.- Validación de datos y mensaje de error
+9.- Modificación y eliminación de gastos y/o documentos.
+
+--------------------------------------------------------------------
+
+Perfil del Administrador
+
+1.- crear usuarios.
+2.- Activar/desactivar usuarios
+3.- cambiar contraseña
+4-. ver todos los usuarios
+5.- ver todos los gastos
+6.- ver totales
+7.- ver cantidad de documentos
+8.- exportar gastos a CSV/Excel
+
+Estructura:
+__________________________________________
+|uploads/                                 |
+      2026/                               |
+|        10/                              |
+|	   04/			          |
+|	     0001_2026-10-04_proveedor.jpg|
+|	     0001_2026-10-04_proveedor.jpg|
+|					  |
+|					  |
+|					  |
+|					  |
+|					  |
+
+--------------------------------------------------------------------
+
+Flujo mínimo demostrable :
+ Usuario - Fronted - Backend/API - MySQL
+
+y para documentos :
+
+Registro - Almacenamiento organizado en "/uploads/" - referencia en DB - consultar desde el historial - Visualización del documento
+
+
+

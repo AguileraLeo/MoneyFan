@@ -1,0 +1,53 @@
+( A C T I V I D A D ) 
+
+
+
+--------APP MIS GASTOS--------
+Contexto: App orientada a facilitar el registro y consulta de gastos con sus documentos de respaldo (visibles)
+desde un dispositivo móvil o computador
+
+
+--------------------------------------------------------------------
+Necesito que tomes el rol de un ingeniero informático especializado en IA + UX/UI + Fronted + Backend/API (FULLSTACK)
+
+Necesito que me crees una solución a un problema tan común como los "Microgastos" realizados a diario, a que me refiero?,
+a por ejemplo: Unas galletas en un Kiosco, un desodorante en una farmacia, etc.
+
+--------------------------------------------------------------------
+La App me la vas a entregar en un archivo .zip
+
+Esta primera versión va a contar solamente y exclusivamente de fronted y UX/UI, y Lo que hará,
+será :
+1.- se conectara al gmai el cual utilices para recibir boletas electronicas
+2.- ira sumando cada microgasto y hará un recuento, 
+a) diario
+b) semanal
+c) mensual
+3.- dará a las 20:00 de cada dia, un aviso de cuanto has gastado durante el dia
+4.- tendrá la opción de agregar microgasto manualmente, por ejemplo al hacer una compra con efectivo.
+5.- esta aplicación demo solamente utilizara 2 ventanas, pantalla 1: será digamos el home de la app en donde se vera la suma diaria y 
+la opción de agregar microgasto manualmente para la suma diaria, pantalla 2: veras con graficos cada microgasto, diario, semanal y mensual.
+6.- las ventanas quiero que las crees simulando un teléfono con formato claro y legible
+7.- debe tener una paleta de colores similares con tonos suaves y formales
+
+(El ingreso a la app será con Rut ej: 12.345.678-9 y contraseña : de 6 caracteres)
+
+La demo debe contar con restricciones básicas : Rellenar campos, números enteros positivos para la anotación de dinero, ETC. 
+--------------------------------------------------------------------
+La aplicación se va a llamar "MoneyFan" y las tecnologías que utilizara será :
+a)Kivy       c)kivy.kv
+b)kivyMD
+si crees necesario también puedes utilizar 
+.- PHP + JSON 
+--------------------------------------------------------------------
+Ten en cuenta que lo que necesito que hagas es un archivo .zip para ese zip ser abierto en visual estudio code para poder correr esa demo app
+y su respectiva etiqueta en cada sección de cada código explicando parte por parte que es lo que hace.
+--------------------------------------------------------------------
+NO SE DEBE INCORPORAR BASE DE DATOS o BACKEND (MySQL/MariaDB) DE NINGUN TIPO
+--------------------------------------------------------------------
+A si que si necesitas necesario puedes "HARDCODEAR" o simular los correos y compras.
+
+
+
+
+

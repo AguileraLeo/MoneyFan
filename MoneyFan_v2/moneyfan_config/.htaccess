@@ -1,0 +1,3 @@
+# MoneyFan v2 · Bloquea cualquier acceso web a la configuración
+# (por si esta carpeta terminara dentro de public_html por error).
+Require all denied

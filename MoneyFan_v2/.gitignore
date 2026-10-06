@@ -1,0 +1,4 @@
+# Credenciales reales: NUNCA se suben ni se entregan
+moneyfan_config/config.php
+# Documentos subidos por los usuarios
+public_html/uploads/*/

@@ -1,0 +1,16 @@
+# =====================================================================
+#  MoneyFan v2 · uploads/.htaccess
+#  [QUÉ HACE] Bloquea el acceso DIRECTO a las boletas subidas.
+#  Los documentos solo se entregan a través de api/documentos.php,
+#  que revisa la sesión y que el gasto pertenezca a quien lo pide.
+#  Además impide que se ejecute PHP aquí aunque alguien lograra subirlo.
+# =====================================================================
+Require all denied
+Options -Indexes -ExecCGI
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8 .phar

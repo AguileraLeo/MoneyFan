@@ -1,0 +1,5 @@
+{
+  // Asocia los archivos .kv para resaltar su sintaxis (extensión "Kivy")
+  "files.associations": { "*.kv": "kivy" },
+  "files.exclude": { "**/__pycache__": true }
+}
